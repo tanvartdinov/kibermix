@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Сборник кибермиксов</h1>
+    <div>
+        <div>
+            <h2>Рецепт №2</h2>
+            <p>Классический рецепт, расчитанный на что-то хорошее</p>
+            <h3>Ингриденты:</h3>
+            <ul>
+                <li><a href="https://ipuer.ru/product/1450/">Банвей</a></li>
+                <li><a href="https://ipuer.ru/product/chay-puer-shu-minitun-49-gr-2017g/">Биндао</a></li>
+            </ul>
+
+            <h3>Чайники:</h3>
+            <ul>
+                <li>Лучший вариант - ручник из уцайши</li>
+                <li>Начальный вариант - <a href="https://ipuer.ru/product/chaynik-hantan-shipyao-iz-isinskoy-gliny-dicaosin-200-ml/">Дицаосин</a></li>
+            </ul>
+
+            <input type="number" id="weight2" placeholder="Введите требуемый вес">
+            <button onclick="calculate2()">Вычислить</button>
+            <div class="output">
+                <label for="resultOutput2_1">Банвей</label>
+                <input type="text" id="resultOutput2_1" placeholder="г." readonly>
+                <label for="resultOutput2_2">Банвей</label>
+                <input type="text" id="resultOutput2_2" placeholder="г." readonly>
+              </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        function calculate2() {
+            const total = 12.5;
+            const ingredientRate1 = 8.5 / total;
+            const ingredientRate2 = 4 / total;
+
+            const number = document.getElementById('weight2').value;
+            document.getElementById('resultOutput2_1').value = ingredientRate1 * number;
+            document.getElementById('resultOutput2_2').value = ingredientRate2 * number;
+        }
+    </script>
+</body>
+</html>
